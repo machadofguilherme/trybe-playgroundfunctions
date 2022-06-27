@@ -60,21 +60,19 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(array) {
-  let newArray = [];
-
   for (let index = 0; index < array.length; index += 1) {
-   
+    let newArray = [];
     if (array[index] % 3 === 0) {
       newArray.push('fizz');
     } else if (array[index] % 5 === 0) {
       newArray.push('buzz');
-    } else if (array[index] % 3 === 0 || array[index] % 5 === 0) {
-      newArray.push('fizzBuzz');
-    } else if (array[0] % 5 !== 0 && array[0] % 3 !== 0) {
+    } else if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+        newArray.push('fizzBuzz');
+    } else {
       newArray.push('bug!');
     } 
   }
-  return newArray;
+  return newArray[index];
 }
 
 // Desafio 9
@@ -86,8 +84,20 @@ function decode() {
 }
 
 // Desafio 10
-function techList() {
-  // seu código aqui
+function techList(lista, nomes) {
+  let objectArray = [];
+  for (let index = 0; index < lista.length; index += 1) {
+    objectArray.push(
+      {
+        name: nomes,
+        tech: lista.sort()[index],
+      });
+  }
+  if (objectArray.length === 0) {
+    //objectArray.push('Vazio!');
+    return 'Vazio!';
+  }
+  return objectArray;
 }
 
 module.exports = {
