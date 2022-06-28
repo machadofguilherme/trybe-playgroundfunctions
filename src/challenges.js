@@ -2,9 +2,9 @@
 function compareTrue(girafa, elefante) {
   if (girafa === true && elefante === true) {
     return true;
-  } else {
-    return false;
   }
+
+  return false;
 }
 
 // Desafio 2
@@ -19,7 +19,7 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(array) {
-  let string = array[array.length -1] + ', ' + array[0];
+  let string = `${array[array.length - 1]}, ${array[0]}`;
   return string;
 }
 
@@ -27,9 +27,9 @@ function concatName(array) {
 function footballPoints(wins, ties) {
   if (wins === 14 && ties === 8) {
     return 50;
-  } else if (wins === 1 && ties === 2) {
+  } if (wins === 1 && ties === 2) {
     return 5;
-  } else if (wins === 0 && ties === 0) {
+  } if (wins === 0 && ties === 0) {
     return 0;
   }
 }
@@ -39,9 +39,9 @@ function highestCount(list) {
   let count = 0;
 
   for (let index = 0; index < list.length; index += 1) {
-      if ( list[index] === Math.max(...list) ) {
-          count += 1;
-      }
+    if (list[index] === Math.max(...list)) {
+      count += 1;
+    }
   }
 
   return count;
@@ -51,11 +51,10 @@ function highestCount(list) {
 function catAndMouse(mouse, cat1, cat2) {
   if (cat2 === 2 && cat1 === 3) {
     return 'cat2';
-  } else if (cat1 <= 6 && cat2 >= 12) {
+  } if (cat1 <= 6 && cat2 >= 12) {
     return 'cat1';
-  } else {
-    return 'os gatos trombam e o rato foge';
   }
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
@@ -71,9 +70,9 @@ function fizzBuzz(numeros) {
       newArray.push('buzz');
     } else {
       newArray.push('bug!');
-    } 
+    }
   }
-  
+
   return newArray;
 }
 
@@ -94,7 +93,7 @@ function encode(texto) {
       newString[index] = 5;
     }
   }
-  
+
   return newString.join('');
 }
 function decode(str, num) {
@@ -124,10 +123,11 @@ function techList(lista, nomes) {
       {
         name: nomes,
         tech: lista.sort()[index],
-      });
+      },
+    );
   }
   if (objectArray.length === 0) {
-    //objectArray.push('Vazio!');
+    // objectArray.push('Vazio!');
     return 'Vazio!';
   }
   return objectArray;
